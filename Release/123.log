@@ -1,0 +1,33 @@
+﻿Сборка начата 01.03.2015 15:07:57.
+     1>Проект "C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\123\123.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Обращение к "Release\123.unsuccessfulbuild".
+       GenerateTargetFrameworkMonikerAttribute:
+       Целевой объект "GenerateTargetFrameworkMonikerAttribute" пропускается, так как все выходные файлы актуальны по отношению к входным.
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+         D:\Soft\VS2010\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\123.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt 123.cpp /clr:nostdlib 
+         123.cpp
+         Для всех выходных данных обновления не требуется.
+       CoreResGen:
+         Отсутствуют ресурсы, устаревшие по отношению к файлам своих источников. Пропуск формирования ресурсов.
+       ResourceCompile:
+         Для всех выходных данных обновления не требуется.
+       Link:
+         D:\Soft\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.exe" /INCREMENTAL:NO /NOLOGO /ASSEMBLYRESOURCE:Release\My123.Form1.resources /MANIFEST /ManifestFile:"Release\123.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Release\app.res
+         Release\123.obj
+         Release\AssemblyInfo.obj
+         Release\check.obj
+         Release\stdafx.obj
+         "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         123.vcxproj -> C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.exe;#1" /manifest Release\123.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Файл "Release\123.unsuccessfulbuild" удаляется.
+         Обращение к "Release\123.lastbuildstate".
+     1>Построение проекта "C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\123\123.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.51
