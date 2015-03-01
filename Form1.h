@@ -120,9 +120,9 @@ namespace My123 {
 			// 
 			// answer
 			// 
-			this->answer->Location = System::Drawing::Point(12, 170);
+			this->answer->Location = System::Drawing::Point(12, 115);
 			this->answer->Name = L"answer";
-			this->answer->Size = System::Drawing::Size(100, 20);
+			this->answer->Size = System::Drawing::Size(226, 20);
 			this->answer->TabIndex = 6;
 			// 
 			// button2
@@ -135,11 +135,15 @@ namespace My123 {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
+			// openFileDialog1
+			// 
+			this->openFileDialog1->Filter = L"Текстовые файлы (*.txt)|*.txt";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 262);
+			this->ClientSize = System::Drawing::Size(283, 279);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->answer);
 			this->Controls->Add(this->label2);
@@ -165,42 +169,56 @@ namespace My123 {
 				 }
 				 catch (...)
 				 {
-					 MessageBox::Show("Некорректный формат данных");
+					 MessageBox::Show("Некорректный формат данных. Требуется: x,x y,y");
 					 err=1;
 				 }
 
 				 result=check(x,y,err);
 
 				 if (result==0)
-					 answer->Text="In range";
+					 answer->Text="Принадлежит области";
 				 if (result==1)
-					 answer->Text="On border";
+					 answer->Text="На границе области";
 				 if (result==2)
-					 answer->Text="Out of range";
+					 answer->Text="Не принадлежит области";
 				 if (result==4)
-					 answer->Text="Error";
+					 answer->Text="Ошибка";
 			 }
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
 				 if(openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 				 {
-					 System::IO::StreamReader ^ sr = gcnew
-						 System::IO::StreamReader(openFileDialog1->FileName);
+					 double x,y;
+					 int result,err;
 					 System::String^ cx;
 					 System::String^ cy;
-					 cx= sr->ReadLine();
-					 cy= sr->ReadLine();
-					 coordx->Text=cx;
-					 coordy->Text=cy;
-					 double x = System::Convert::ToDouble(cx);
-					 double y = System::Convert::ToDouble(cy);
-					 int result=check(x,y,0);
+					 System::IO::StreamReader ^ sr = gcnew
+						 System::IO::StreamReader(openFileDialog1->FileName);
+					 try
+					 {
+						 cx= sr->ReadLine();
+						 cy= sr->ReadLine();
+						 coordx->Text=cx;
+						 coordy->Text=cy;
+						 x = System::Convert::ToDouble(cx);
+						 y = System::Convert::ToDouble(cy); 
+					 }
+					 catch (...)
+					 {
+						 MessageBox::Show("Некорректный вид файла. Убеитесь в том, что файл имеет вид x,x[следующая строка]y,y");
+						 err=1;
+					 }
+					 
+					 result=check(x,y,err);
+
 					 if (result==0)
-						 answer->Text="In range";
+						 answer->Text="Принадлежит области";
 					 if (result==1)
-						 answer->Text="On border";
+						 answer->Text="На границе области";
 					 if (result==2)
-						 answer->Text="Out of range";
+						 answer->Text="Не принадлежит области";
+					 if (result==4)
+						 answer->Text="Ошибка";
 
 					 //				 MessageBox::Show(cx);
 					 sr->Close();

@@ -1,7 +1,7 @@
-﻿Сборка начата 01.03.2015 15:07:57.
-     1>Проект "C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\123\123.vcxproj" в узле 2 (целевые объекты build).
+﻿Сборка начата 01.03.2015 16:23:35.
+     1>Проект "C:\Users\Admine\documents\visual studio 2010\Projects\123\123\123.vcxproj" в узле 2 (целевые объекты build).
      1>InitializeBuildStatus:
-         Обращение к "Release\123.unsuccessfulbuild".
+         Создание "Release\123.unsuccessfulbuild", так как было задано "AlwaysCreate".
        GenerateTargetFrameworkMonikerAttribute:
        Целевой объект "GenerateTargetFrameworkMonikerAttribute" пропускается, так как все выходные файлы актуальны по отношению к входным.
        ClCompile:
@@ -14,19 +14,19 @@
        ResourceCompile:
          Для всех выходных данных обновления не требуется.
        Link:
-         D:\Soft\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.exe" /INCREMENTAL:NO /NOLOGO /ASSEMBLYRESOURCE:Release\My123.Form1.resources /MANIFEST /ManifestFile:"Release\123.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Release\app.res
+         D:\Soft\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Admine\documents\visual studio 2010\Projects\123\Release\123.exe" /INCREMENTAL:NO /NOLOGO /ASSEMBLYRESOURCE:Release\My123.Form1.resources /MANIFEST /ManifestFile:"Release\123.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Admine\documents\visual studio 2010\Projects\123\Release\123.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Release\app.res
          Release\123.obj
          Release\AssemblyInfo.obj
          Release\check.obj
          Release\stdafx.obj
          "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-         123.vcxproj -> C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.exe
+         123.vcxproj -> C:\Users\Admine\documents\visual studio 2010\Projects\123\Release\123.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\Release\123.exe;#1" /manifest Release\123.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Admine\documents\visual studio 2010\Projects\123\Release\123.exe;#1" /manifest Release\123.exe.intermediate.manifest
        FinalizeBuildStatus:
          Файл "Release\123.unsuccessfulbuild" удаляется.
          Обращение к "Release\123.lastbuildstate".
-     1>Построение проекта "C:\Users\Admine\Documents\Visual Studio 2010\Projects\123\123\123.vcxproj" завершено (целевые объекты build).
+     1>Построение проекта "C:\Users\Admine\documents\visual studio 2010\Projects\123\123\123.vcxproj" завершено (целевые объекты build).
 
 Построение успешно завершено.
 
