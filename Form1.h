@@ -47,6 +47,8 @@ namespace My123 {
 	private: System::Windows::Forms::TextBox^  answer;
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::OpenFileDialog^  openFileDialog1;
+	private: System::Windows::Forms::Button^  button3;
+	private: System::Windows::Forms::SaveFileDialog^  saveFileDialog1;
 
 
 
@@ -71,15 +73,17 @@ namespace My123 {
 			this->answer = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(12, 66);
+			this->button1->Location = System::Drawing::Point(12, 106);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(100, 23);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Check";
+			this->button1->Text = L"Проверить";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
@@ -120,18 +124,18 @@ namespace My123 {
 			// 
 			// answer
 			// 
-			this->answer->Location = System::Drawing::Point(12, 115);
+			this->answer->Location = System::Drawing::Point(12, 149);
 			this->answer->Name = L"answer";
 			this->answer->Size = System::Drawing::Size(226, 20);
 			this->answer->TabIndex = 6;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(138, 65);
+			this->button2->Location = System::Drawing::Point(12, 68);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(100, 23);
 			this->button2->TabIndex = 7;
-			this->button2->Text = L"Open file";
+			this->button2->Text = L"Открыть файл";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
@@ -139,11 +143,26 @@ namespace My123 {
 			// 
 			this->openFileDialog1->Filter = L"Текстовые файлы (*.txt)|*.txt";
 			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(12, 187);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(138, 23);
+			this->button3->TabIndex = 8;
+			this->button3->Text = L"Сохранить результат";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
+			// 
+			// saveFileDialog1
+			// 
+			this->saveFileDialog1->Filter = L"Текстовые файлы (*.txt)|*.txt";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(283, 279);
+			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->answer);
 			this->Controls->Add(this->label2);
@@ -208,7 +227,7 @@ namespace My123 {
 						 MessageBox::Show("Некорректный вид файла. Убеитесь в том, что файл имеет вид x,x[следующая строка]y,y");
 						 err=1;
 					 }
-					 
+
 					 result=check(x,y,err);
 
 					 if (result==0)
@@ -224,8 +243,23 @@ namespace My123 {
 					 sr->Close();
 				 }
 			 }
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+				 //   Stream^ myStream;
+
+				 if(saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+				 {
+					 System::IO::StreamWriter ^ sr = gcnew
+						 System::IO::StreamWriter(saveFileDialog1->FileName);
+					 sr->WriteLine(coordx->Text);
+					 sr->WriteLine(coordy->Text);
+					 sr->WriteLine(answer->Text);
+					 sr->Close();
+					answer->Text="Результат сохранён";
+				 }
+			 }
 	private: System::Void coordy_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
+
 	};
 }
 
