@@ -52,6 +52,7 @@ namespace My123 {
 
 
 
+
 	private:
 		/// <summary>
 		/// Требуется переменная конструктора.
@@ -161,7 +162,7 @@ namespace My123 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(283, 279);
+			this->ClientSize = System::Drawing::Size(281, 276);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->answer);
@@ -259,7 +260,7 @@ namespace My123 {
 			 }
 	private: System::Void coordy_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
-
-	};
+	
+};
 }
 
