@@ -18,7 +18,9 @@ namespace My123 {
 	public:
 		Form1(void)
 		{
+
 			InitializeComponent();
+				
 			//
 			//TODO: добавьте код конструктора
 			//
@@ -49,6 +51,8 @@ namespace My123 {
 	private: System::Windows::Forms::OpenFileDialog^  openFileDialog1;
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::SaveFileDialog^  saveFileDialog1;
+
+
 
 
 
@@ -162,7 +166,7 @@ namespace My123 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(281, 276);
+			this->ClientSize = System::Drawing::Size(384, 462);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->answer);
@@ -203,6 +207,29 @@ namespace My123 {
 					 answer->Text="Не принадлежит области";
 				 if (result==4)
 					 answer->Text="Ошибка";
+			//	Font font = new Font("Times New Roman", 24, FontStyle.Bold, GraphicsUnit.Pixel);
+				
+    Graphics^ g = Graphics::FromHwnd(this->Handle);
+	  System::Drawing::Font^ drawFont = gcnew System::Drawing::Font( "Arial",10 );
+	  SolidBrush^ drawBrush = gcnew SolidBrush( Color::Black );
+	//x
+	g->DrawLine(Pens::Black, 50, 320, 300, 320);
+	//y
+	g->DrawLine(Pens::Black, 170, 220, 170, 420);
+	//line
+    g->DrawLine(Pens::Black, 50, 310, 300, 310);
+
+    g->DrawEllipse(Pens::Black, 120, 270, 100, 100);
+	 g->DrawString("0",drawFont,drawBrush, 160,320);
+	  g->DrawString("1",drawFont,drawBrush, 220,320);
+	   g->DrawString("1",drawFont,drawBrush, 170,250);
+	  g->DrawString("-1",drawFont,drawBrush, 100,320);
+	  g->DrawString("-1",drawFont,drawBrush, 170,370);
+	   g->DrawString("0,2",drawFont,drawBrush, 170,295);
+
+
+  //  g->FillRectangle(Green, 200,320, 1, 1);
+	
 			 }
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
@@ -260,7 +287,9 @@ namespace My123 {
 			 }
 	private: System::Void coordy_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
-	
+			  
+ 
+
 };
 }
 
