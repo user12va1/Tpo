@@ -70,6 +70,7 @@ namespace My123 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+		
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->coordx = (gcnew System::Windows::Forms::TextBox());
 			this->coordy = (gcnew System::Windows::Forms::TextBox());
@@ -210,6 +211,7 @@ namespace My123 {
 			//	Font font = new Font("Times New Roman", 24, FontStyle.Bold, GraphicsUnit.Pixel);
 				
     Graphics^ g = Graphics::FromHwnd(this->Handle);
+	g->Clear( SystemColors::Control );
 	  System::Drawing::Font^ drawFont = gcnew System::Drawing::Font( "Arial",10 );
 	  SolidBrush^ drawBrush = gcnew SolidBrush( Color::Black );
 	//x
@@ -226,10 +228,10 @@ namespace My123 {
 	  g->DrawString("-1",drawFont,drawBrush, 100,320);
 	  g->DrawString("-1",drawFont,drawBrush, 170,370);
 	   g->DrawString("0,2",drawFont,drawBrush, 170,295);
+	   g->FillRectangle(drawBrush,(x*50)+170, -(y*50)+320, 2, 2);
+	 //   g->FillRectangle(drawBrush,220, 320, 3, 3);
 
 
-  //  g->FillRectangle(Green, 200,320, 1, 1);
-	
 			 }
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
@@ -252,7 +254,7 @@ namespace My123 {
 					 }
 					 catch (...)
 					 {
-						 MessageBox::Show("Некорректный вид файла. Убеитесь в том, что файл имеет вид x,x[следующая строка]y,y");
+						 MessageBox::Show("Некорректный вид файла. Убедитесь в том, что файл имеет вид x,x[следующая строка]y,y");
 						 err=1;
 					 }
 
